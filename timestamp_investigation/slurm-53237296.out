@@ -1,0 +1,220 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Wed Nov 29 14:29:50 CET 2023
+* Job name:             run_prop.sh
+* Job id:               53237296
+* User:                 spratt
+* Account:              nemo
+* Submit host:          cca017
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0353
+****************************************************************
+g++ -c `root-config --cflags --libs`  prop_uncertainties.C
+g++ -o prop.exe  prop_uncertainties.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+4.13217e+06
+1 38 13
+5 30 13
+6 30 13
+7 30 13
+8 30 13
+9 30 13
+10 30 13
+11 30 13
+2 25 13
+3 25 13
+4 25 13
+12 35 13
+0      261530
+1      91903
+2      115069
+3      152647
+4      200089
+5      264420
+6      341390
+7      435289
+8      526970
+9      562144
+10      578011
+11      605151
+12      609857
+13      598010
+14      598867
+15      598017
+16      638391
+17      655935
+18      608458
+19      606485
+20      617743
+21      662145
+22      631377
+23      620351
+24      616829
+25      615125
+26      619231
+27      627741
+28      618547
+29      618589
+30      618806
+31      621018
+32      623544
+33      622823
+34      621256
+35      627181
+36      630168
+37      620695
+38      621328
+39      620221
+40      619976
+41      617829
+42      618210
+43      615272
+44      619479
+45      614167
+46      610870
+47      610790
+48      615910
+49      614028
+50      613098
+51      616458
+52      618556
+53      632142
+54      620028
+55      621679
+56      620589
+57      622447
+58      627092
+59      634644
+60      628685
+61      631651
+62      655037
+63      631661
+64      626621
+65      627202
+66      628545
+67      629776
+68      627382
+69      627571
+70      630511
+71      636021
+72      625885
+73      629949
+74      626594
+75      620968
+76      623835
+77      626053
+78      619591
+79      619543
+80      620662
+81      630208
+82      613277
+83      621274
+84      611667
+85      622174
+86      611330
+87      603486
+88      600839
+89      591089
+90      588926
+91      532055
+92      453154
+93      353293
+94      270194
+95      210927
+96      157624
+97      116058
+98      97046
+99      258831
+
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =     0.924161
+NDf                       =           35
+Edm                       =  3.22779e-06
+NCalls                    =           63
+p0                        =      0.69649   +/-   0.0043196    	 (limited)
+p1                        =  4.66283e-08   +/-   0.00476396   	 (limited)
+Fit Parameters:
+vel: 0.69649
+acc: 4.66283e-08
+Warning in <Fit>: Abnormal termination of minimization.
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =      52966.8
+NDf                       =           68
+Edm                       =      8.39268
+NCalls                    =          112
+p0                        =   0.00029244   +/-   3.00042e-08  	 (limited)
+p1                        =  3.56515e-08   +/-   6.23944e-11  	 (limited)
+Iteration Fit
+Fit Parameters:
+vel: 0.00029244
+acc: 3.56515e-08
+Warning in <Fit>: Abnormal termination of minimization.
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =      63240.9
+NDf                       =           68
+Edm                       =      5.73618
+NCalls                    =           82
+p0                        =  0.000288709   +/-   1.50187e-07  	 (limited)
+p1                        =  3.59442e-08   +/-   4.89185e-11  	 (limited)
+Iteration Fit
+Fit Parameters:
+vel: 0.000288709
+acc: 3.59442e-08
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+Warning in <Fit>: Abnormal termination of minimization.
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =      354.089
+NDf                       =           38
+Edm                       =          inf
+NCalls                    =          731
+p0                        =     0.616425   +/-   nan          	 (limited)
+p1                        =  3.65835e-05   +/-   nan          	 (limited)
+Fit Parameters:
+vel: 0.616425
+acc: 3.65835e-05
+Info in <ROOT::Math::ParameterSettings>: lower/upper bounds outside current parameter value. The value will be set to (low+up)/2 
+Warning in <Fit>: Abnormal termination of minimization.
+
+****************************************
+         Invalid FitResult  (status = 4 )
+****************************************
+Minimizer is Minuit / Migrad
+Chi2                      =      1095.41
+NDf                       =           38
+NCalls                    =          193
+p0                        =     0.615619   +/-   nan          	 (limited)
+p1                        =  1.65309e-05   +/-   nan          	 (limited)
+Fit Parameters:
+vel: 0.615619
+acc: 1.65309e-05
+Info in <TCanvas::Print>: png file /sps/nemo/scratch/spratt/analysis/timestamp_investigation/run_output_analysis_files/1051/snd_prop.png has been created
+Info in <TCanvas::Print>: png file /sps/nemo/scratch/spratt/analysis/timestamp_investigation/run_output_analysis_files/1051/snd_check.png has been created
+Info in <TCanvas::Print>: png file /sps/nemo/scratch/spratt/analysis/timestamp_investigation/run_output_analysis_files/1051/snd_bad_cells.png has been created
+Info in <TCanvas::Print>: png file /sps/nemo/scratch/spratt/analysis/timestamp_investigation/run_output_analysis_files/1051/snd_array_check.png has been created
+Info in <TCanvas::Print>: png file /sps/nemo/scratch/spratt/analysis/timestamp_investigation/run_output_analysis_files/1051/snd_activity_snd.png has been created
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Wed Nov 29 14:54:23 CET 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 53237296
+Efficiency:
+seff 53237296
+****************************************************************

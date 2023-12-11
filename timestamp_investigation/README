@@ -1,0 +1,56 @@
+Content of the software directory
+=================================
+
+Initial content:
+----------------
+
+- macro.C
+- Makefile
+- LinkDef.h
+
+Generated content (see #Commands section)
+-----------------------------------------
+
+- myDictionary.cxx (from rootcling command)
+- myDictionary_rdict.pcm (from rootcling command)
+- myDictionary.o (shared library file produced after compiling the ROOT dictionary with g++)
+- macro.o (shared library produced with the Makefile)
+- macro.exe (final executable)
+
+
+
+Commands
+========
+
+
+Generate ROOT dictionary
+------------------------
+
+$ rootcling -f myDictionary.cxx LinkDef.h
+
+It generates 2 new files called 'myDictionary.cxx' and 'myDictionary_rdict.pcm' that will be used by ROOT to understand how to have access to a nested std::vector<std::vector> >.
+
+
+Compile ROOT dictionary with g++
+--------------------------------
+
+$ g++ -c `root-config --cflags --libs`  myDictionary.cxx
+
+It compiles the myDictionary.cxx into a shared library myDictionary.o
+
+
+
+Compiling the ROOT macro from the Makefile
+------------------------------------------
+
+$ make
+
+It generates 2 new files again. One is the shared library for the macro: macro.o and the last one is the executable you will use macro.exe
+
+
+Executing the ROOT macro
+------------------------
+
+$ ./macro.exe
+
+It will produced an output ROOT file where you save your plots, distribution or spectrum (TH1D, TH2D...)

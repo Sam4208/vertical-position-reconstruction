@@ -1,0 +1,28 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Wed Dec  6 23:41:19 CET 2023
+* Job name:             run_calo.sh
+* Job id:               54599624
+* User:                 spratt
+* Account:              nemo
+* Submit host:          cca018
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0048
+****************************************************************
+g++ -c `root-config --cflags --libs` calo_timestamp.C  
+g++ -o calo_timestamp.exe  calo_timestamp.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+hello
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Wed Dec  6 23:54:46 CET 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 54599624
+Efficiency:
+seff 54599624
+****************************************************************

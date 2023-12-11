@@ -1,0 +1,27 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Sat Dec  2 10:48:22 CET 2023
+* Job name:             run_calo.sh
+* Job id:               53921653
+* User:                 spratt
+* Account:              nemo
+* Submit host:          cca020
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0193
+****************************************************************
+make: Nothing to be done for `all'.
+hello
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Sat Dec  2 11:02:20 CET 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 53921653
+Efficiency:
+seff 53921653
+****************************************************************

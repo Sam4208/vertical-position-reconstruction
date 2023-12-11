@@ -1,0 +1,9 @@
+TARGET=simultaneous_fit.exe
+all: simultaneous_fit.exe
+
+$(TARGET) : simultaneous_fit.C
+		g++ -c `root-config --cflags --libs`  simultaneous_fit.C
+		g++ -o $(TARGET)  simultaneous_fit.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+
+clean :
+	    rm $(TARGET)

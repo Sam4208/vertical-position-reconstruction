@@ -1,0 +1,9 @@
+TARGET=fitting_analysis.exe
+all: fitting_analysis.exe
+
+$(TARGET) : fitting_analysis.C
+		g++ -c `root-config --cflags --libs`  fitting_analysis.C
+		g++ -o $(TARGET)  fitting_analysis.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+
+clean :
+	    rm $(TARGET)

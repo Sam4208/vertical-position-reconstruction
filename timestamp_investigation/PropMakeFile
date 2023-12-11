@@ -1,0 +1,9 @@
+TARGET=prop.exe
+all: prop.exe
+
+$(TARGET) : prop_uncertainties.C
+		g++ -c `root-config --cflags --libs`  prop_uncertainties.C
+		g++ -o $(TARGET)  prop_uncertainties.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+
+clean :
+	    rm $(TARGET)

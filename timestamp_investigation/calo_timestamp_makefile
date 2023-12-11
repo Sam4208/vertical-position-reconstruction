@@ -1,0 +1,9 @@
+TARGET=calo_timestamp.exe
+all: calo_timestamp.exe
+
+$(TARGET) : calo_timestamp.C
+		g++ -c `root-config --cflags --libs` calo_timestamp.C  
+		g++ -o $(TARGET)  calo_timestamp.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+
+clean :
+	    rm $(TARGET)

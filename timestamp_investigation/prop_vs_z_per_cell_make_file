@@ -1,0 +1,9 @@
+TARGET=prop_vs_z_per_cell.exe
+all: prop_vs_z_per_cell.exe
+
+$(TARGET) : prop_vs_z_per_cell.C
+		g++ -c `root-config --cflags --libs`  prop_vs_z_per_cell.C
+		g++ -o $(TARGET)  prop_vs_z_per_cell.o myDictionary.o `root-config --cflags --libs` -lHistPainter
+
+clean :
+	    rm $(TARGET)
